@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roupas BR | Moda Brasileira</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="#" class="logo">
+                    <h1>Roupas <span>BR</span></h1>
+                </a>
+                
+                <nav class="navbar">
+                    <ul>
+                        <li><a href="#inicio">Início</a></li>
+                        <li><a href="#produtos">Produtos</a></li>
+                        <li><a href="#sobre">Sobre Nós</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </nav>
+
+                <div class="nav-icons">
+                    <button class="cart-icon" id="cartBtn">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </button>
+                    <button class="menu-toggle" id="menuToggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Carrinho Lateral -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h2>Seu Carrinho</h2>
+            <button class="close-cart" id="closeCart"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <p class="empty-cart">Seu carrinho está vazio</p>
+        </div>
+        <div class="cart-footer">
+            <div class="total-price">
+                <strong>Total: R$ <span id="totalPrice">0,00</span></strong>
+            </div>
+            <button class="btn btn-primary">Finalizar Compra</button>
+        </div>
+    </div>
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Seção Início / Hero -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h2>Moda com Estilo Brasileiro</h2>
+            <p>Qualidade e elegância para você se sentir bem todos os dias</p>
+            <a href="#produtos" class="btn btn-primary">Ver Coleção</a>
+        </div>
+    </section>
+
+    <!-- Seção Produtos -->
+    <section id="produtos" class="products-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nossos Produtos</h2>
+                <p>Confira nossas novidades e peças selecionadas</p>
+            </div>
+            
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="todos">Todos</button>
+                <button class="filter-btn" data-filter="masculino">Masculino</button>
+                <button class="filter-btn" data-filter="feminino">Feminino</button>
+                <button class="filter-btn" data-filter="acessorios">Acessórios</button>
+            </div>
+
+            <div class="products-grid" id="productsGrid">
+                <!-- Os produtos serão carregados via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Sobre -->
+    <section id="sobre" class="about-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-img">
+                    <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=600" alt="Sobre a Roupas BR">
+                </div>
+                <div class="about-content">
+                    <h2>Sobre a Roupas BR</h2>
+                    <p>Somos uma marca brasileira apaixonada por moda e qualidade. Nossa missão é oferecer roupas que combinam conforto, estilo e preços justos.</p>
+                    <p>Todas as nossas peças são cuidadosamente selecionadas e produzidas com materiais de alta qualidade, pensando sempre no seu bem-estar.</p>
+                    <div class="features">
+                        <div class="feature-item">
+                            <i class="fas fa-truck"></i>
+                            <span>Entrega Rápida</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-undo"></i>
+                            <span>Troca Grátis</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-lock"></i>
+                            <span>Pagamento Seguro</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Contato -->
+    <section id="contato" class="contact-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Fale Conosco</h2>
+                <p>Dúvidas? Estamos aqui para ajudar!</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Informações de Contato</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Terezopolis de Goias - GO, Brasil</p>
+                    <p><i class="fas fa-phone"></i> (62) 993669106</p>
+                    <p><i class="fas fa-envelope"></i> eugeninholopes10@gmail</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" placeholder="Seu Nome" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Seu E-mail" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Sua Mensagem" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Roupas BR</h3>
+                    <p>Sua loja de roupas favorita. Moda com qualidade e preço justo.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="#inicio">Início</a></li>
+                        <li><a href="#produtos">Produtos</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Ajuda</h4>
+                    <ul>
+                        <li><a href="#">Política de Privacidade</a></li>
+                        <li><a href="#">Termos de Uso</a></li>
+                        <li><a href="#">Entregas e Devoluções</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Newsletter</h4>
+                    <form class="newsletter">
+                        <input type="email" placeholder="Seu e-mail">
+                        <button type="submit" class="btn btn-primary">Inscrever</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Roupas BR. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
